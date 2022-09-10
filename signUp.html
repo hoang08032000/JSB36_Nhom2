@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#Forums">Forums</a></li>
+        <li><a href="./login.html">Login</a></li>
+        <li><a class="active" href="#SignUp">Sign Up</a></li>
+      </ul>
+    </nav>
+
+    <div class="login_container">
+      <form class="login_box" id="form" method="post" name="form" onsubmit="return validated()">
+        <div class="user-box">
+        <input id="Name" type="text"  name="uname" />
+        <label for="uname"><b>Username</b></label>
+        <div id="error_Username">Username must be more than 6 letters</div>
+        <div class="user-box">
+
+        <div class="user-box">
+        <input id="Password" type="password"  name="psw" />
+        <label for="psw"><b>Password</b></label>
+        <div id="error_Password">Password must be more than 6 letters</div>
+        </div>
+
+        <div class="user-box">
+        <input id="Password2" type="password"  name="psw2" />
+        <label for="psw"><b>Confirm password</b></label>
+        <div id="error_Password2">Password doesnt match</div>
+        </div>
+
+        <button type="submit" onsubmit="return validated()">Sign up</button>
+      </form>
+    </div>
+
+
+    <script>
+      const namee= document.forms['form']['uname']
+      const password = document.forms['form']['psw']
+      const password2 = document.forms['form']['psw2']
+      const form = document.getElementById('form')
+
+      const error_Username = document.getElementById('error_Username')
+      const error_Password = document.getElementById('error_Password')
+      const error_Password2 = document.getElementById('error_Password2')
+    </script>
+        <script src="./main.js"></script>
+        <script>
+          Login()
+        </script>
+  </body>
+</html>

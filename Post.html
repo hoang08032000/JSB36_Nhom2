@@ -35,11 +35,7 @@
         </div>
       </div>
 
-      <div class="column side">
-        <h2>Live Events</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-      </div>
-    </div>
+
 
 
     <script src="main.js"></script>
@@ -72,8 +68,11 @@
         var post = Posts.find(t => t.id == id);
         var header = document.querySelector('.titles');
         var headerHtml = `
-            <h4 class="title">
+            <h2 class="title">
                 ${post.title}
+            </h2>
+            <h4>
+            ${post.content}
             </h4>
             <div class="bottom">
                 <p class="timestamp">
